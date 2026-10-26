@@ -2,37 +2,38 @@
   "schema": 1,
   "product": "juno",
   "channel": "beta",
-  "version": "1.0.0-rc.18",
-  "publishedAt": "2026-10-26T11:26:22.063Z",
+  "version": "1.0.0-rc.19",
+  "publishedAt": "2026-10-26T18:34:29.740Z",
   "releaseNotes": {
-    "summary": "The final Beta 0.3 build: bug reports arrive as a reviewed email draft, Juno discovers signed future updates, and every companion orb animates its thinking in both Bot and Code mode.",
+    "summary": "Juno Beta 0.3 Hotfix 1 repairs ChatGPT plan sign-in packaging and adds a guarded factory reset that returns Juno to its genuine first-run setup.",
     "highlights": [
-      "Help & feedback prepares a complete email to the Juno owner in your own mail app; you review it and press Send yourself.",
-      "Settings → Updates checks a signed feed and shows the released version and notes, with a manual install route for the unsigned installer.",
-      "Orb thinking and working animations now run in both Bot and Code mode with one shared character language.",
-      "Long reports are shortened visibly to fit a mail link; Copy and Save keep the complete document."
+      "The Windows DPAPI credential helper is built, staged and verified by the packaged app before ChatGPT credentials are stored.",
+      "A pinned Codex runtime is bundled for ChatGPT plan sign-in, while independently installed Codex remains untouched.",
+      "Settings → General → Reset Juno erases Juno-owned bots, conversations, memory, routines, teams, results, provider credentials and preferences, then reopens onboarding.",
+      "External projects, the Juno installation, protocol registration, update trust and other applications' credentials are preserved."
     ],
     "improvements": [
-      "Code mode reports planning, working, approval, complete and failed states through the same orb and status line.",
-      "Custom-coloured bots keep their animation running across unrelated re-renders.",
-      "Crash records stay on this PC and are offered as a reviewed draft on the next launch."
+      "ChatGPT setup distinguishes a missing Codex runtime, unavailable credential protection, a cancelled browser sign-in, an ineligible plan and a usage limit.",
+      "Codex discovery also finds user-local npm, pnpm, winget, scoop and sandbox installs, and rechecks after a runtime is installed.",
+      "A reset interrupted by a crash or reboot is completed on the next launch before any server or window starts."
     ],
     "fixes": [
-      "Removed the reporting-service dependency that made Send Report inactive.",
-      "Removed the automatic crash-report switch that implied unattended delivery."
+      "Fixed the packaged app reporting `codex CLI not found` on a fresh Windows installation.",
+      "Fixed credential protection being unavailable because the DPAPI helper was never staged outside ASAR.",
+      "Fixed a missing prerequisite being shown as a failed ChatGPT account sign-in."
     ],
     "knownIssues": [
-      "The Windows installer is unsigned; automatic installation of unsigned updates is intentionally disabled.",
-      "rc.17 and earlier cannot discover this release; one manual install is required.",
-      "Phone and Tailscale connectivity are deferred for Beta 0.3."
+      "The Windows installer remains unsigned; automatic installation of unsigned updates is intentionally disabled.",
+      "A live ChatGPT sign-in still needs a real eligible account and owner authorization.",
+      "The NSIS installer itself is not executed on this development host to protect the owner's existing Beta installation."
     ],
-    "compatibility": "Windows x64. Existing Beta profiles upgrade in place; keep the previous installer to roll back."
+    "compatibility": "Windows x64. Existing Beta profiles upgrade in place and keep their data unless the owner explicitly chooses Reset Juno."
   },
   "artifact": {
-    "fileName": "juno-1.0.0-rc.18-setup.exe",
-    "size": 391808044,
-    "sha256": "d28e79636d19baabc7cc9da8d926519211aff4f3be0335641865a768404ac2a0",
-    "url": "https://github.com/tanishkfr/juno-beta/releases/download/v1.0.0-rc.18/juno-1.0.0-rc.18-setup.exe"
+    "fileName": "juno-1.0.0-rc.19-setup.exe",
+    "size": 503598654,
+    "sha256": "462c379193b5fdc1030deedaddb1efbc72fc00afb9cddf86ee35d94523aefed1",
+    "url": "https://github.com/tanishkfr/juno-beta/releases/download/v1.0.0-rc.19/juno-1.0.0-rc.19-setup.exe"
   },
-  "signature": "D8fRK+PJucXBXuAKRL6uIVyejz5BX/8nG01dmG7f+diXUaHou7fxtvEsEEaEhssVmJsWbYf6WWeuTwMiWon3DQ=="
+  "signature": "/aaHSTg6FDIjEkr8ISf6vbYyL9Kf0r5MNLnPU2r6HUd/w5EeTZROtQam9HtAy0O0nAPJ14g0NUtFz8czd6wCBw=="
 }
