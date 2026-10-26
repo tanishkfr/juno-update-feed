@@ -3,7 +3,7 @@
   "product": "juno",
   "channel": "beta",
   "version": "1.0.0-rc.18",
-  "publishedAt": "2026-10-26T11:17:35.583Z",
+  "publishedAt": "2026-10-26T11:26:22.063Z",
   "releaseNotes": {
     "summary": "The final Beta 0.3 build: bug reports arrive as a reviewed email draft, Juno discovers signed future updates, and every companion orb animates its thinking in both Bot and Code mode.",
     "highlights": [
@@ -30,9 +30,9 @@
   },
   "artifact": {
     "fileName": "juno-1.0.0-rc.18-setup.exe",
-    "size": 391807725,
-    "sha256": "bc5c1fc096bca83bbbd72b37609e7d214947b8d8a9c7a4da52ec161524a439ae",
+    "size": 391808044,
+    "sha256": "d28e79636d19baabc7cc9da8d926519211aff4f3be0335641865a768404ac2a0",
     "url": "https://github.com/tanishkfr/juno-beta/releases/download/v1.0.0-rc.18/juno-1.0.0-rc.18-setup.exe"
   },
-  "signature": "ab713s0+9reMG21Fqa+VRjgId8sxc7U75HcZcFS+PwIOpSPNEpuDomPdK+enNxN1vUnFAc4soJOe9iu2pjPCAA=="
+  "signature": "D8fRK+PJucXBXuAKRL6uIVyejz5BX/8nG01dmG7f+diXUaHou7fxtvEsEEaEhssVmJsWbYf6WWeuTwMiWon3DQ=="
 }

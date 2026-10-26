@@ -3,7 +3,7 @@
   "product": "juno",
   "channel": "beta",
   "version": "1.0.0-rc.19",
-  "publishedAt": "2026-10-26T11:17:36.002Z",
+  "publishedAt": "2026-10-26T11:26:22.449Z",
   "releaseNotes": {
     "summary": "Qualification metadata for the Beta 0.3 update-discovery acceptance run. This is not a published Juno release.",
     "highlights": [
@@ -19,9 +19,9 @@
   },
   "artifact": {
     "fileName": "juno-1.0.0-rc.18-setup.exe",
-    "size": 391807725,
-    "sha256": "bc5c1fc096bca83bbbd72b37609e7d214947b8d8a9c7a4da52ec161524a439ae",
+    "size": 391808044,
+    "sha256": "d28e79636d19baabc7cc9da8d926519211aff4f3be0335641865a768404ac2a0",
     "url": "https://github.com/tanishkfr/juno-beta/releases"
   },
-  "signature": "AlWFH6Ok8WoYSx2mBlA8SkJW89Rk68+gbPXoACKCiexrJ+lcNsbK4nvK36ia1/rsYKxr3eRVncbaXqZqtJs7CA=="
+  "signature": "NWC2g2Lm69LISwZKaGjDNZ+7B7sdiU72AXOWBMbq9Xnm2H+/AUr67nu+NPmF0ejBlasoTbOJ0v+Ky24Py65eCQ=="
 }
