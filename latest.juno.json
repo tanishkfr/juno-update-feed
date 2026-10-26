@@ -1,0 +1,38 @@
+{
+  "schema": 1,
+  "product": "juno",
+  "channel": "beta",
+  "version": "1.0.0-rc.18",
+  "publishedAt": "2026-10-26T11:17:35.583Z",
+  "releaseNotes": {
+    "summary": "The final Beta 0.3 build: bug reports arrive as a reviewed email draft, Juno discovers signed future updates, and every companion orb animates its thinking in both Bot and Code mode.",
+    "highlights": [
+      "Help & feedback prepares a complete email to the Juno owner in your own mail app; you review it and press Send yourself.",
+      "Settings → Updates checks a signed feed and shows the released version and notes, with a manual install route for the unsigned installer.",
+      "Orb thinking and working animations now run in both Bot and Code mode with one shared character language.",
+      "Long reports are shortened visibly to fit a mail link; Copy and Save keep the complete document."
+    ],
+    "improvements": [
+      "Code mode reports planning, working, approval, complete and failed states through the same orb and status line.",
+      "Custom-coloured bots keep their animation running across unrelated re-renders.",
+      "Crash records stay on this PC and are offered as a reviewed draft on the next launch."
+    ],
+    "fixes": [
+      "Removed the reporting-service dependency that made Send Report inactive.",
+      "Removed the automatic crash-report switch that implied unattended delivery."
+    ],
+    "knownIssues": [
+      "The Windows installer is unsigned; automatic installation of unsigned updates is intentionally disabled.",
+      "rc.17 and earlier cannot discover this release; one manual install is required.",
+      "Phone and Tailscale connectivity are deferred for Beta 0.3."
+    ],
+    "compatibility": "Windows x64. Existing Beta profiles upgrade in place; keep the previous installer to roll back."
+  },
+  "artifact": {
+    "fileName": "juno-1.0.0-rc.18-setup.exe",
+    "size": 391807725,
+    "sha256": "bc5c1fc096bca83bbbd72b37609e7d214947b8d8a9c7a4da52ec161524a439ae",
+    "url": "https://github.com/tanishkfr/juno-beta/releases/download/v1.0.0-rc.18/juno-1.0.0-rc.18-setup.exe"
+  },
+  "signature": "ab713s0+9reMG21Fqa+VRjgId8sxc7U75HcZcFS+PwIOpSPNEpuDomPdK+enNxN1vUnFAc4soJOe9iu2pjPCAA=="
+}

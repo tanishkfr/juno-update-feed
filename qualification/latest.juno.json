@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "product": "juno",
+  "channel": "beta",
+  "version": "1.0.0-rc.19",
+  "publishedAt": "2026-10-26T11:17:36.002Z",
+  "releaseNotes": {
+    "summary": "Qualification metadata for the Beta 0.3 update-discovery acceptance run. This is not a published Juno release.",
+    "highlights": [
+      "Proves the installed rc.18 build fetches, verifies and presents signed HTTPS metadata.",
+      "No installer is offered for automatic download; installation stays manual."
+    ],
+    "improvements": [],
+    "fixes": [],
+    "knownIssues": [
+      "Temporary qualification metadata; it is removed after the acceptance run."
+    ],
+    "compatibility": "Qualification only. Do not install anything from this entry."
+  },
+  "artifact": {
+    "fileName": "juno-1.0.0-rc.18-setup.exe",
+    "size": 391807725,
+    "sha256": "bc5c1fc096bca83bbbd72b37609e7d214947b8d8a9c7a4da52ec161524a439ae",
+    "url": "https://github.com/tanishkfr/juno-beta/releases"
+  },
+  "signature": "AlWFH6Ok8WoYSx2mBlA8SkJW89Rk68+gbPXoACKCiexrJ+lcNsbK4nvK36ia1/rsYKxr3eRVncbaXqZqtJs7CA=="
+}
