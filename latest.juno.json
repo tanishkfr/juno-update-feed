@@ -2,38 +2,34 @@
   "schema": 1,
   "product": "juno",
   "channel": "beta",
-  "version": "1.0.0-rc.20",
-  "publishedAt": "2026-10-27T05:55:08.065Z",
+  "version": "1.0.0-rc.21",
+  "publishedAt": "2026-10-27T06:57:05.118Z",
   "releaseNotes": {
-    "summary": "Juno Beta 0.3 Hotfix 2 polishes the Bot Voice settings layout and separates Bot and Code conversation ownership, so switching surfaces can no longer borrow the other side's conversation.",
+    "summary": "Juno Beta 0.3 Hotfix 3 repairs signed update discovery in the installed Windows application, so Juno finds its bundled update-trust configuration without an environment override.",
     "highlights": [
-      "Voice settings are rebuilt on scoped field styles and the shared accessible switch, with a layout that holds at narrow window sizes.",
-      "Bot and Code keep independent conversation ownership; ordinary mode switching restores each side's own conversation or an honest empty Code state.",
-      "Continue in Code is the only explicit handoff: it opens a new Code conversation with bounded references to the Bot transcript and leaves the Bot conversation untouched.",
-      "The crash-report notice keeps its full-size dismiss control and no longer collapses into a misaligned stack."
+      "The packaged updater now resolves resources/update-trust.json from the application's own resources directory instead of the process working directory.",
+      "A normally installed Juno reports a configured signed update channel, fetches the HTTPS manifest and verifies its Ed25519 signature with the bundled pinned key.",
+      "Update installation stays manual: Juno announces a signed release and opens the release page; it never downloads or runs the unsigned installer."
     ],
     "improvements": [
-      "The Bot conversation menu excludes Code conversations, and the bot subtitle no longer borrows a Code session title.",
-      "Code conversations are created with their own record, so creating a Code session no longer moves the Bot's active conversation.",
-      "A notification route now returns to Bot before resolving its selection, leaving Code ownership untouched."
+      "A focused regression test starts the packaged updater with no override and fails if the trust lookup falls back to the source checkout."
     ],
     "fixes": [
-      "Fixed switching to Code showing the Bot conversation as if it were a Code session.",
-      "Fixed creating a Code session silently replacing the Bot's active conversation.",
-      "Fixed the crash-report notice actions and close control misaligning when the message wrapped."
+      "Fixed installed builds reporting 'Automatic updates are not configured in this build' even though resources/update-trust.json shipped beside the app.",
+      "Fixed rc.18, rc.19 and rc.20 requiring JUNO_UPDATE_TRUST_FILE before they could discover the signed feed."
     ],
     "knownIssues": [
+      "Users of rc.18, rc.19 and rc.20 must install rc.21 by hand once, because those builds cannot discover the feed by default.",
       "The Windows installer remains unsigned; automatic installation of unsigned updates is intentionally disabled.",
-      "A live ChatGPT sign-in still needs a real eligible account and owner authorization.",
       "The NSIS installer itself is not executed on this development host to protect the owner's existing Beta installation."
     ],
     "compatibility": "Windows x64. Existing Beta profiles upgrade in place and keep their data, bots and conversations unless the owner explicitly chooses Reset Juno."
   },
   "artifact": {
-    "fileName": "juno-1.0.0-rc.20-setup.exe",
-    "size": 503599363,
-    "sha256": "8972a40bf53977c0dd5385c453c47f5f7ef3fdaed7b131e72391883db00dcb4f",
-    "url": "https://github.com/tanishkfr/juno-beta/releases/download/v1.0.0-rc.20/juno-1.0.0-rc.20-setup.exe"
+    "fileName": "juno-1.0.0-rc.21-setup.exe",
+    "size": 503599479,
+    "sha256": "2c3b883e41769bb7716353a0c9b134a5aa75141425b9556a9bfb4b6f673ca80d",
+    "url": "https://github.com/tanishkfr/juno-beta/releases/download/v1.0.0-rc.21/juno-1.0.0-rc.21-setup.exe"
   },
-  "signature": "cHuLcwEFWlHT5/2LksaVH4Kj79uu6an7lzO+PVAnCDIyVjkX44BdnW5/osKC2YoFiYYN9/QeyS6mSFrJ0pZ1CA=="
+  "signature": "54KlzDmea/5aBX58qdVIKZCe/oOlreofvzW97dW2gDmP4QiKh7gg/mx7mZbboGqzi2K7WIOf5yUFmwJo95AmCQ=="
 }
