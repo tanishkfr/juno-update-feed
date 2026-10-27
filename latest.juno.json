@@ -2,38 +2,38 @@
   "schema": 1,
   "product": "juno",
   "channel": "beta",
-  "version": "1.0.0-rc.19",
-  "publishedAt": "2026-10-26T18:34:29.740Z",
+  "version": "1.0.0-rc.20",
+  "publishedAt": "2026-10-27T05:55:08.065Z",
   "releaseNotes": {
-    "summary": "Juno Beta 0.3 Hotfix 1 repairs ChatGPT plan sign-in packaging and adds a guarded factory reset that returns Juno to its genuine first-run setup.",
+    "summary": "Juno Beta 0.3 Hotfix 2 polishes the Bot Voice settings layout and separates Bot and Code conversation ownership, so switching surfaces can no longer borrow the other side's conversation.",
     "highlights": [
-      "The Windows DPAPI credential helper is built, staged and verified by the packaged app before ChatGPT credentials are stored.",
-      "A pinned Codex runtime is bundled for ChatGPT plan sign-in, while independently installed Codex remains untouched.",
-      "Settings → General → Reset Juno erases Juno-owned bots, conversations, memory, routines, teams, results, provider credentials and preferences, then reopens onboarding.",
-      "External projects, the Juno installation, protocol registration, update trust and other applications' credentials are preserved."
+      "Voice settings are rebuilt on scoped field styles and the shared accessible switch, with a layout that holds at narrow window sizes.",
+      "Bot and Code keep independent conversation ownership; ordinary mode switching restores each side's own conversation or an honest empty Code state.",
+      "Continue in Code is the only explicit handoff: it opens a new Code conversation with bounded references to the Bot transcript and leaves the Bot conversation untouched.",
+      "The crash-report notice keeps its full-size dismiss control and no longer collapses into a misaligned stack."
     ],
     "improvements": [
-      "ChatGPT setup distinguishes a missing Codex runtime, unavailable credential protection, a cancelled browser sign-in, an ineligible plan and a usage limit.",
-      "Codex discovery also finds user-local npm, pnpm, winget, scoop and sandbox installs, and rechecks after a runtime is installed.",
-      "A reset interrupted by a crash or reboot is completed on the next launch before any server or window starts."
+      "The Bot conversation menu excludes Code conversations, and the bot subtitle no longer borrows a Code session title.",
+      "Code conversations are created with their own record, so creating a Code session no longer moves the Bot's active conversation.",
+      "A notification route now returns to Bot before resolving its selection, leaving Code ownership untouched."
     ],
     "fixes": [
-      "Fixed the packaged app reporting `codex CLI not found` on a fresh Windows installation.",
-      "Fixed credential protection being unavailable because the DPAPI helper was never staged outside ASAR.",
-      "Fixed a missing prerequisite being shown as a failed ChatGPT account sign-in."
+      "Fixed switching to Code showing the Bot conversation as if it were a Code session.",
+      "Fixed creating a Code session silently replacing the Bot's active conversation.",
+      "Fixed the crash-report notice actions and close control misaligning when the message wrapped."
     ],
     "knownIssues": [
       "The Windows installer remains unsigned; automatic installation of unsigned updates is intentionally disabled.",
       "A live ChatGPT sign-in still needs a real eligible account and owner authorization.",
       "The NSIS installer itself is not executed on this development host to protect the owner's existing Beta installation."
     ],
-    "compatibility": "Windows x64. Existing Beta profiles upgrade in place and keep their data unless the owner explicitly chooses Reset Juno."
+    "compatibility": "Windows x64. Existing Beta profiles upgrade in place and keep their data, bots and conversations unless the owner explicitly chooses Reset Juno."
   },
   "artifact": {
-    "fileName": "juno-1.0.0-rc.19-setup.exe",
-    "size": 503598654,
-    "sha256": "462c379193b5fdc1030deedaddb1efbc72fc00afb9cddf86ee35d94523aefed1",
-    "url": "https://github.com/tanishkfr/juno-beta/releases/download/v1.0.0-rc.19/juno-1.0.0-rc.19-setup.exe"
+    "fileName": "juno-1.0.0-rc.20-setup.exe",
+    "size": 503599363,
+    "sha256": "8972a40bf53977c0dd5385c453c47f5f7ef3fdaed7b131e72391883db00dcb4f",
+    "url": "https://github.com/tanishkfr/juno-beta/releases/download/v1.0.0-rc.20/juno-1.0.0-rc.20-setup.exe"
   },
-  "signature": "/aaHSTg6FDIjEkr8ISf6vbYyL9Kf0r5MNLnPU2r6HUd/w5EeTZROtQam9HtAy0O0nAPJ14g0NUtFz8czd6wCBw=="
+  "signature": "cHuLcwEFWlHT5/2LksaVH4Kj79uu6an7lzO+PVAnCDIyVjkX44BdnW5/osKC2YoFiYYN9/QeyS6mSFrJ0pZ1CA=="
 }
