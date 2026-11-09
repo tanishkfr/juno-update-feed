@@ -2,34 +2,42 @@
   "schema": 1,
   "product": "juno",
   "channel": "beta",
-  "version": "1.0.0-rc.21",
-  "publishedAt": "2026-10-27T06:57:05.118Z",
+  "version": "0.4.0",
+  "publishedAt": "2026-11-09T19:25:37.816Z",
   "releaseNotes": {
-    "summary": "Juno Beta 0.3 Hotfix 3 repairs signed update discovery in the installed Windows application, so Juno finds its bundled update-trust configuration without an environment override.",
+    "summary": "Juno v0.4.0 Beta — Intelligence & Efficiency. Council, /btw, faster everyday replies, a smaller compact installer, and optional browser/Whisper downloads. Unsigned installer; updates are manual.",
     "highlights": [
-      "The packaged updater now resolves resources/update-trust.json from the application's own resources directory instead of the process working directory.",
-      "A normally installed Juno reports a configured signed update channel, fetches the HTTPS manifest and verifies its Ed25519 signature with the bundled pinned key.",
-      "Update installation stays manual: Juno announces a signed release and opens the release page; it never downloads or runs the unsigned installer."
+      "Council Mode adds an optional planner and independent reviewer around Bot and Code work. It is off by default.",
+      "/btw opens a side conversation with its own task, budget and transcript without disturbing the main task.",
+      "Manual model selection is persisted and reported; a stale pin is refused rather than silently replaced.",
+      "The compact installer is about 272 MB, down from about 504 MB, and installs about 1.05 GB."
     ],
     "improvements": [
-      "A focused regression test starts the packaged updater with no override and fails if the trust lookup falls back to the source checkout."
+      "Reply speed is provider-bound. The earlier CommandCode qualification measured 39–44 ms of Juno dispatch and about 2.4–3.0 seconds end to end; the final packaged Codex smoke measured about 5–7 seconds. These are measurements, not guarantees.",
+      "Cold first-turn Juno dispatch improved from 2.699 s to 1.724 s in a matched A/B on the earlier route.",
+      "Code Mode keeps its bundled Boreal coordinator, real file edits, permission cards and bounded recovery.",
+      "Stale data-directory lease recovery now works on Windows 11 without wmic; a renderer crash reloads once and reattaches."
     ],
     "fixes": [
-      "Fixed installed builds reporting 'Automatic updates are not configured in this build' even though resources/update-trust.json shipped beside the app.",
-      "Fixed rc.18, rc.19 and rc.20 requiring JUNO_UPDATE_TRUST_FILE before they could discover the signed feed."
+      "Fixed release-stage labels showing an older candidate version instead of 0.4.0.",
+      "Fixed the in-app installer verifier rejecting the 0.4.0 stable-version installer and the full variant.",
+      "Fixed the in-app verifier treating the approved 1.0.0-rc to 0.4.0 manual migration as an ordinary downgrade."
     ],
     "knownIssues": [
-      "Users of rc.18, rc.19 and rc.20 must install rc.21 by hand once, because those builds cannot discover the feed by default.",
-      "The Windows installer remains unsigned; automatic installation of unsigned updates is intentionally disabled.",
-      "The NSIS installer itself is not executed on this development host to protect the owner's existing Beta installation."
+      "The Windows installer is unsigned. Windows may show Unknown Publisher or SmartScreen, and some managed PCs may block it.",
+      "Updates are manual. The signed automatic-update bridge from the old 1.0.0-rc line is not qualified.",
+      "External providers need your own account, network access, subscription and quota.",
+      "The compact build omits the browser engine and Whisper weights; both are optional verified downloads. System.Speech works immediately.",
+      "Screen-reader speech-output acceptance is partial; keyboard, focus, contrast, zoom, forced colours and reduced motion were checked.",
+      "No enforceable workspace-wide spending hard cap."
     ],
-    "compatibility": "Windows x64. Existing Beta profiles upgrade in place and keep their data, bots and conversations unless the owner explicitly chooses Reset Juno."
+    "compatibility": "Windows x64. Existing Juno Beta 0.3 profiles upgrade in place with this manual installer; keep the previous installer if you need to roll back."
   },
   "artifact": {
-    "fileName": "juno-1.0.0-rc.21-setup.exe",
-    "size": 503599479,
-    "sha256": "2c3b883e41769bb7716353a0c9b134a5aa75141425b9556a9bfb4b6f673ca80d",
-    "url": "https://github.com/tanishkfr/juno-beta/releases/download/v1.0.0-rc.21/juno-1.0.0-rc.21-setup.exe"
+    "fileName": "juno-0.4.0-setup.exe",
+    "size": 271652163,
+    "sha256": "4af07ecd32f8769524a7a72e027930e85cf793b46c23e1ab49c7305877be2942",
+    "url": "https://github.com/tanishkfr/juno-beta/releases/download/v0.4.0/juno-0.4.0-setup.exe"
   },
-  "signature": "54KlzDmea/5aBX58qdVIKZCe/oOlreofvzW97dW2gDmP4QiKh7gg/mx7mZbboGqzi2K7WIOf5yUFmwJo95AmCQ=="
+  "signature": "mymnderHkKzfZbqvO7M+zZjFJNaW4a763Y8whoK21ys9PyY//sl5umXj8GCnQVUTP2qp3VjOloLXP61LbZo+Dg=="
 }
