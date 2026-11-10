@@ -30,7 +30,7 @@
       "Live microphone recording was not exercised during final qualification; installed speech components and bundled Whisper transcription passed.",
       "The tested browser model omitted a required tabId on its initial close call. Juno reported the error and the session was released.",
       "A workspace-wide hard spending cap remains unenforceable across some external provider routes.",
-      "No clean-room Windows VM was used; the installed full/offline variant was tested on the owner existing Windows environment."
+      "No clean-room Windows VM was used; the installed full/offline variant was tested on the owner's existing Windows environment."
     ],
     "compatibility": "Windows 11 x64. Existing v0.4.0 profiles upgrade in place with this manual installer. Keep the v0.4.0 installer and a data backup for rollback; rollback rewrites schema metadata but preserves data."
   },
@@ -42,5 +42,5 @@
   },
   "releaseUrl": "https://github.com/tanishkfr/juno-beta/releases/tag/v0.4.1",
   "updatePolicy": "manual",
-  "signature": "KYuoAwRfMyrrBiNn+53lquYhQEzuq+biz6UWBxi6QYsfEV4LGRyfwY9KR6RWaUl7FlXBfO9LmkS2GP0ECUIzAA=="
+  "signature": "X02WnFQgDiYhPh/kpjpt8UXgNuDl2bWyFDbikBouAmrdt3K5Qh+q4rPg8Jk1y+MeJW6EkGvDHDLJ5F5VTHjXDg=="
 }
