@@ -40,5 +40,7 @@
     "sha256": "3b6b3ef3ec870ca779e1a7b623a3d970d468729f0b9bf2608b171f2400233ebd",
     "url": "https://github.com/tanishkfr/juno-beta/releases/download/v0.4.1/juno-0.4.1-setup.exe"
   },
-  "signature": "fVka0NVfAVARp6H4dZ1wden3FGtpmRfVBoIZDwVYl4wOdc3Gw5xvVlFVa+jda2A3eI+C0JoJRAp7n6t0E5LfCA=="
+  "releaseUrl": "https://github.com/tanishkfr/juno-beta/releases/tag/v0.4.1",
+  "updatePolicy": "manual",
+  "signature": "KYuoAwRfMyrrBiNn+53lquYhQEzuq+biz6UWBxi6QYsfEV4LGRyfwY9KR6RWaUl7FlXBfO9LmkS2GP0ECUIzAA=="
 }
