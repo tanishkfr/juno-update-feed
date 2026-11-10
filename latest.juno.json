@@ -2,42 +2,43 @@
   "schema": 1,
   "product": "juno",
   "channel": "beta",
-  "version": "0.4.0",
-  "publishedAt": "2026-11-09T19:25:37.816Z",
+  "version": "0.4.1",
+  "publishedAt": "2026-11-10T08:20:24.567Z",
   "releaseNotes": {
-    "summary": "Juno v0.4.0 Beta — Intelligence & Efficiency. Council, /btw, faster everyday replies, a smaller compact installer, and optional browser/Whisper downloads. Unsigned installer; updates are manual.",
+    "summary": "Juno v0.4.1 Beta — Unified Agent Runtime. Bot Mode, Code Mode, Council, /btw, room/team and delegated work now share one durable task system. Unsigned installer; updates are manual.",
     "highlights": [
-      "Council Mode adds an optional planner and independent reviewer around Bot and Code work. It is off by default.",
-      "/btw opens a side conversation with its own task, budget and transcript without disturbing the main task.",
-      "Manual model selection is persisted and reported; a stale pin is refused rather than silently replaced.",
-      "The compact installer is about 272 MB, down from about 504 MB, and installs about 1.05 GB."
+      "One shared task identity and lifecycle across Bot Mode, Code Mode, Council, /btw and room/team execution.",
+      "More reliable cancellation, recovery, model-call accounting and permission state, with one terminal record per task.",
+      "Council planner/reviewer calls and room member calls are durable task calls with their own model and usage.",
+      "Stronger Code Mode model-selection boundaries: Juno verifies the exact model Boreal binds."
     ],
     "improvements": [
-      "Reply speed is provider-bound. The earlier CommandCode qualification measured 39–44 ms of Juno dispatch and about 2.4–3.0 seconds end to end; the final packaged Codex smoke measured about 5–7 seconds. These are measurements, not guarantees.",
-      "Cold first-turn Juno dispatch improved from 2.699 s to 1.724 s in a matched A/B on the earlier route.",
-      "Code Mode keeps its bundled Boreal coordinator, real file edits, permission cards and bounded recovery.",
-      "Stale data-directory lease recovery now works on Windows 11 without wmic; a renderer crash reloads once and reattaches."
+      "Warm short replies measured about 2.29–2.92 seconds on the tested route; durable task overhead about 7.06 ms p50. Measurements, not guarantees.",
+      "Ariadne remains independently evaluative; no executor can mark its own work verified.",
+      "Crash-notice behavior was qualified on the installed test identity.",
+      "The compact installer is about 271.7 MB; the full/offline installer is about 488.6 MB.",
+      "Boreal, Pi and OMP remain bounded execution components behind the Juno task system."
     ],
     "fixes": [
-      "Fixed release-stage labels showing an older candidate version instead of 0.4.0.",
-      "Fixed the in-app installer verifier rejecting the 0.4.0 stable-version installer and the full variant.",
-      "Fixed the in-app verifier treating the approved 1.0.0-rc to 0.4.0 manual migration as an ordinary downgrade."
+      "Cancellation now settles through the task runtime and cannot be recorded as success.",
+      "Late provider usage is recorded as late usage without rewriting the terminal receipt.",
+      "A duplicate completion or recovery replay cannot double-charge a task."
     ],
     "knownIssues": [
       "The Windows installer is unsigned. Windows may show Unknown Publisher or SmartScreen, and some managed PCs may block it.",
-      "Updates are manual. The signed automatic-update bridge from the old 1.0.0-rc line is not qualified.",
-      "External providers need your own account, network access, subscription and quota.",
-      "The compact build omits the browser engine and Whisper weights; both are optional verified downloads. System.Speech works immediately.",
-      "Screen-reader speech-output acceptance is partial; keyboard, focus, contrast, zoom, forced colours and reduced motion were checked.",
-      "No enforceable workspace-wide spending hard cap."
+      "Updates are manual. The signed automatic-installer upgrade path is not qualified; the feed only announces a release and opens the release page.",
+      "Live microphone recording was not exercised during final qualification; installed speech components and bundled Whisper transcription passed.",
+      "The tested browser model omitted a required tabId on its initial close call. Juno reported the error and the session was released.",
+      "A workspace-wide hard spending cap remains unenforceable across some external provider routes.",
+      "No clean-room Windows VM was used; the installed full/offline variant was tested on the owner existing Windows environment."
     ],
-    "compatibility": "Windows x64. Existing Juno Beta 0.3 profiles upgrade in place with this manual installer; keep the previous installer if you need to roll back."
+    "compatibility": "Windows 11 x64. Existing v0.4.0 profiles upgrade in place with this manual installer. Keep the v0.4.0 installer and a data backup for rollback; rollback rewrites schema metadata but preserves data."
   },
   "artifact": {
-    "fileName": "juno-0.4.0-setup.exe",
-    "size": 271652163,
-    "sha256": "4af07ecd32f8769524a7a72e027930e85cf793b46c23e1ab49c7305877be2942",
-    "url": "https://github.com/tanishkfr/juno-beta/releases/download/v0.4.0/juno-0.4.0-setup.exe"
+    "fileName": "juno-0.4.1-setup.exe",
+    "size": 271664867,
+    "sha256": "3b6b3ef3ec870ca779e1a7b623a3d970d468729f0b9bf2608b171f2400233ebd",
+    "url": "https://github.com/tanishkfr/juno-beta/releases/download/v0.4.1/juno-0.4.1-setup.exe"
   },
-  "signature": "mymnderHkKzfZbqvO7M+zZjFJNaW4a763Y8whoK21ys9PyY//sl5umXj8GCnQVUTP2qp3VjOloLXP61LbZo+Dg=="
+  "signature": "fVka0NVfAVARp6H4dZ1wden3FGtpmRfVBoIZDwVYl4wOdc3Gw5xvVlFVa+jda2A3eI+C0JoJRAp7n6t0E5LfCA=="
 }
