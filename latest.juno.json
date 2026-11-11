@@ -2,45 +2,50 @@
   "schema": 1,
   "product": "juno",
   "channel": "beta",
-  "version": "0.4.1",
-  "publishedAt": "2026-11-10T08:20:24.567Z",
+  "version": "0.4.2-rc.3",
+  "publishedAt": "2026-11-11T08:52:29.898Z",
   "releaseNotes": {
-    "summary": "Juno v0.4.1 Beta — Unified Agent Runtime. Bot Mode, Code Mode, Council, /btw, room/team and delegated work now share one durable task system. Unsigned installer; updates are manual.",
+    "summary": "Juno v0.4.2 Beta — Performance & Polish. Task-aware tool exposure cut reported input tokens by about 80.5% in the matched Phase 1 short-turn benchmark, the compact installer is smaller, startup/readiness improved on the tested host, and optional runtimes, Code validation and browser cleanup were tightened. Unsigned installer; updates are manual.",
     "highlights": [
-      "One shared task identity and lifecycle across Bot Mode, Code Mode, Council, /btw and room/team execution.",
-      "More reliable cancellation, recovery, model-call accounting and permission state, with one terminal record per task.",
-      "Council planner/reviewer calls and room member calls are durable task calls with their own model and usage.",
-      "Stronger Code Mode model-selection boundaries: Juno verifies the exact model Boreal binds."
+      "About 80.5% fewer reported input tokens in the matched Phase 1 short-turn benchmark; this is benchmark-specific, not a universal per-task or per-provider claim.",
+      "Compact installer reduced from 271.7 MB to 252.3 MB.",
+      "Faster startup and renderer readiness on the tested Windows host, with shell, first-transcript and composer-ready marks.",
+      "Modular optional Android platform tools and cloudflared, with pinned versions, sizes and SHA-256 verification.",
+      "Capability selection during onboarding and a unified Runtimes & storage surface in Settings."
     ],
     "improvements": [
-      "Warm short replies measured about 2.29–2.92 seconds on the tested route; durable task overhead about 7.06 ms p50. Measurements, not guarantees.",
-      "Ariadne remains independently evaluative; no executor can mark its own work verified.",
-      "Crash-notice behavior was qualified on the installed test identity.",
-      "The compact installer is about 271.7 MB; the full/offline installer is about 488.6 MB.",
-      "Boreal, Pi and OMP remain bounded execution components behind the Juno task system."
+      "Code Mode validates requested content against the staged workspace, not only file existence.",
+      "A verified but unapplied change stays staged; apply records completion, while discard, rollback or failed validation is reported honestly.",
+      "Browser sessions have session-scoped close tools; the model cannot close your browser or another application's browser.",
+      "Installer identity is checked before and after packaging and before installation.",
+      "Codex ChatGPT-plan subscription routing and exact model pins remain unchanged.",
+      "Codex, Boreal/OMP and CUA remain bundled; they are not optional downloads."
     ],
     "fixes": [
-      "Cancellation now settles through the task runtime and cannot be recorded as success.",
-      "Late provider usage is recorded as late usage without rewriting the terminal receipt.",
-      "A duplicate completion or recovery replay cannot double-charge a task."
+      "Council reports the ordinary turn's exact executor model instead of routing a second, unused guess.",
+      "A closed browser session is settled even when it never performed an action, so it cannot leave an agent-owned session behind.",
+      "Cancellation and app exit release owned browser sessions.",
+      "A negative mention such as 'do not change README.md' no longer authorizes that file as a writable target.",
+      "A file named only to run is treated as an input, not an editable target."
     ],
     "knownIssues": [
-      "The Windows installer is unsigned. Windows may show Unknown Publisher or SmartScreen, and some managed PCs may block it.",
+      "The Windows installers are unsigned. Windows may show Unknown Publisher or SmartScreen, and some managed PCs may block them.",
       "Updates are manual. The signed automatic-installer upgrade path is not qualified; the feed only announces a release and opens the release page.",
-      "Live microphone recording was not exercised during final qualification; installed speech components and bundled Whisper transcription passed.",
-      "The tested browser model omitted a required tabId on its initial close call. Juno reported the error and the session was released.",
-      "A workspace-wide hard spending cap remains unenforceable across some external provider routes.",
-      "No clean-room Windows VM was used; the installed full/offline variant was tested on the owner's existing Windows environment."
+      "A workspace-wide spending hard cap remains unenforceable across some external provider routes.",
+      "Boreal/OMP and CUA remain resident; there is no automatic safe idle retirement.",
+      "Android device control, live microphone capture and a public remote-access tunnel remain hardware-, account- or consent-bound.",
+      "External providers require their own valid accounts, subscriptions and quota.",
+      "The rebuilt full/offline installer was identity-verified and smoke-tested from the same qualified source on the isolated test identity; a fresh production-identity full NSIS registration was not repeated because no disposable Windows profile or VM was available."
     ],
-    "compatibility": "Windows 11 x64. Existing v0.4.0 profiles upgrade in place with this manual installer. Keep the v0.4.0 installer and a data backup for rollback; rollback rewrites schema metadata but preserves data."
+    "compatibility": "Windows 11 x64. Existing v0.4.1 profiles upgrade in place with this manual installer. The public v0.4.1 installer remains available for manual rollback; back up local data first. Rollback compatibility is not promised for future schema versions."
   },
   "artifact": {
-    "fileName": "juno-0.4.1-setup.exe",
-    "size": 271664867,
-    "sha256": "3b6b3ef3ec870ca779e1a7b623a3d970d468729f0b9bf2608b171f2400233ebd",
-    "url": "https://github.com/tanishkfr/juno-beta/releases/download/v0.4.1/juno-0.4.1-setup.exe"
+    "fileName": "juno-0.4.2-setup.exe",
+    "size": 252282304,
+    "sha256": "4ab457a97c0fb768768720adcc7c9af4bc5899fef5d2d070d15176c51aa5522b",
+    "url": "https://github.com/tanishkfr/juno-beta/releases/download/v0.4.2/juno-0.4.2-setup.exe"
   },
-  "releaseUrl": "https://github.com/tanishkfr/juno-beta/releases/tag/v0.4.1",
+  "releaseUrl": "https://github.com/tanishkfr/juno-beta/releases/tag/v0.4.2",
   "updatePolicy": "manual",
-  "signature": "X02WnFQgDiYhPh/kpjpt8UXgNuDl2bWyFDbikBouAmrdt3K5Qh+q4rPg8Jk1y+MeJW6EkGvDHDLJ5F5VTHjXDg=="
+  "signature": "YEoJsz+63zkcUzYXkOhwgQZBLo0PoW50FIzKOnrhA2CrXZqklXicf5MhpgIo7QiVbihpdMHefwrgW0zQ7bN3Bw=="
 }
