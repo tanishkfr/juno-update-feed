@@ -13,4 +13,4 @@ Juno Windows public beta.
 - Installation remains manual. Juno announces a signed release and opens the
   release page; it never downloads or runs the unsigned installer.
 
-Current metadata: **Juno v0.4.1 Beta — Unified Agent Runtime**.
+Current metadata: **Juno v0.4.2 Beta — Performance & Polish** (internal build `0.4.2-rc.3`).
